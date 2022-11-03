@@ -1,0 +1,41 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+sidebar {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.left-sidebar {
+    background-image: url("https://paulryan.com.au/wp-content/uploads/2015/01/high-resolution-wallpapers-25.jpg");
+    background-repeat: no-repeat;
+}
+
+.item-box {
+    margin: 1rem;
+    padding: 1rem;
+    width: 90%;
+    height: 13rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.title {
+    text-transform: capitalize;
+    font-weight: 520;
+    letter-spacing: 1px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.description {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+
+}
+
+.detail-box {
+    color: rgba(225, 29, 39, 0.7);
+}
