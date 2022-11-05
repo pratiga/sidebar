@@ -1,5 +1,5 @@
 import "./App.css";
-import Sidebar from "./components/leftPanel";
+import Sidebar from "./components/sidebar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
