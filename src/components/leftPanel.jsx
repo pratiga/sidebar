@@ -1,39 +1,41 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useState } from "react";
 import { data } from "../data/data";
-import("../styles/leftPanel.css");
-
-export default function leftPanel({ detail }) {
-  let content = null;
+import "../styles/sidebar.css";
+import RightSidebar from "./rightSidebar";
+const sidebar1 = () => {
+  const [detail, setDetail] = useState();
   let count = 0;
-
-  if (detail) {
-    content = (
-      <div className="leftPanel">
-        <h1 className="title"> {detail.title}</h1>
-        <div className="item-image">
-          <img src={detail.image} alt="images" />
-        </div>
-        <div className="detail-box">
-          <span>{detail.Location}</span>
-          <span>{detail.status}</span>
-        </div>
-        <p className="description">{detail.details}</p>
-      </div>
-    );
+  function handeldetails(item) {
+    setDetail({ ...item });
   }
-
-  if (!detail) {
-    <div className="leftPanel">{data.map((item) => count++)}</div>;
-    content = (
-      <div className="leftPanel">
-        <h1>Total NO of ITEM: {count}</h1>
-      </div>
-    );
-  }
+  data.map(() => count++);
   return (
-    <>
-      <div className="content">{content}</div>
-    </>
+    <sidebar>
+      <div className="left-sidebar">
+        {detail ? (
+          <div className="leftPanel">
+            <h1 className="title"> {detail.title}</h1>
+            <div className="item-image">
+              <img src={detail.image} alt="images" />
+            </div>
+            <div className="detail-box">
+              <span>{detail.Location}</span>
+              <span>{detail.status}</span>
+            </div>
+            <p className="description">{detail.details}</p>
+          </div>
+        ) : (
+          <div className="left-panel">
+            <h1>Total No of ITEM: {count}</h1>
+          </div>
+        )}
+      </div>
+      <div className="right-sidebar">
+        <RightSidebar handeldetails={handeldetails} />
+      </div>
+    </sidebar>
   );
-}
+};
+
+export default sidebar1;
