@@ -1,9 +1,12 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { data } from "../data/data";
 import("../styles/leftPanel.css");
 
 export default function leftPanel({ detail }) {
   let content = null;
+  let count = 0;
+
   if (detail) {
     content = (
       <div className="leftPanel">
@@ -19,22 +22,12 @@ export default function leftPanel({ detail }) {
       </div>
     );
   }
+
   if (!detail) {
+    <div className="leftPanel">{data.map((item) => count++)}</div>;
     content = (
       <div className="leftPanel">
-        {data.map((item) => (
-          <div className="item-box">
-            <h1 className="title">{item.title}</h1>
-            <div className="item-image">
-              <img src={item.image} alt="images" />
-            </div>
-            <div className="detail-box">
-              <span>{item.Location}</span>
-              <span>{item.status}</span>
-            </div>
-            <p className="description">{item.details}</p>
-          </div>
-        ))}
+        <h1>Total NO of ITEM: {count}</h1>
       </div>
     );
   }
