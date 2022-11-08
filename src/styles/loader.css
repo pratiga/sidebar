@@ -1,60 +1,12 @@
-* {
-  margin: 0;
-}
-
-.App {
-  position: relative;
-  font-family: sans-serif;
-  text-align: center;
-  min-height: 100vh;
-  padding: 2rem;
-  margin-top: 4rem;
-
-}
-
-.card {
-  display: flex;
-  width: 200px;
-  height: 360px;
-  text-align: center;
-  background: white;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
-
-}
-
-.card-img {
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  margin-left: 1rem;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 5px black;
-
-}
-
-.username {
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.useremail {
-  color: red;
-}
-
-.useraddress {
-  color: green;
-}
-
 #preloader {
   background: url("https://thumbs.gfycat.com/ZealousFineHochstettersfrog-size_restricted.gif");
   background-repeat: no-repeat;
-  background-size: 20%;
+  background-size: 30%;
   background-position: center;
-  height: 50vh;
+  height: 100vh;
   width: 100%;
   position: absolute;
-  z-index: 100;
+  top: 100px;
+  right: 15%;
+  z-index: 1;
 }
