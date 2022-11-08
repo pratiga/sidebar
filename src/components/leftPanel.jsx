@@ -18,7 +18,7 @@ const leftPanel = ({ detail }) => {
         </div>
       ) : (
         <div className="left-panel">
-          <h1>Total No of ITEM: {data.length}</h1>
+          {/* <h1>Total No of ITEM: {data.length}</h1> */}
         </div>
       )}
     </>
