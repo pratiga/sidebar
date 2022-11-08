@@ -105,10 +105,10 @@ img {
 }
 
 .left-panel {
-    background-image: url("https://static-cse.canva.com/blob/572626/1.magebyRodionKutsaevviaUnsplash.jpg");
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+    /* background-image: url("https://static-cse.canva.com/blob/572626/1.magebyRodionKutsaevviaUnsplash.jpg");
+    background-repeat: no-repeat; */
+    /* width: 100%;
+    height: 100%; */
     color: aliceblue;
     margin-top: 1rem;
 }
