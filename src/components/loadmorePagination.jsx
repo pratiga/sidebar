@@ -1,20 +1,10 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useState } from "react";
+import React from "react";
 import { data } from "../data/data";
 import "../styles/loadmorePagination.css";
 import Cardloader from "./cardloader";
 
-const loadmorePagination = () => {
-  const [visible, setVisible] = useState(5);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const showMoreItem = () => {
-    setIsLoading(false);
-    setTimeout(() => {
-      setVisible((prevValue) => prevValue + 5);
-    }, 1000);
-    setIsLoading(false);
-  };
+const loadmorePagination = ({ visible, isLoading}) => {
   return (
     <>
       <div className="app">
@@ -36,12 +26,7 @@ const loadmorePagination = () => {
             })}
           </div>
         )}
-        {isLoading === true && <Cardloader />}
-        <div className="loadmore">
-          <button className=" btns" onClick={showMoreItem}>
-            Load Item
-          </button>
-        </div>
+        {isLoading === true && <Cardloader/>}
       </div>
     </>
   );
