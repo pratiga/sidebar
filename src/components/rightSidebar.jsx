@@ -2,7 +2,7 @@ import React from "react";
 import { data } from "../data/data";
 import "../styles/sidebar.css";
 
-const rightSidebar = ({ handeldetails }) => {
+const rightSidebar = ({ handeldetails, showMoreItem }) => {
   return (
     <div className="right-sidebar">
       {data.map((item) => (
@@ -17,6 +17,9 @@ const rightSidebar = ({ handeldetails }) => {
           </div>
         </div>
       ))}
+      <button className="btns loadmore" onClick={showMoreItem} >
+        Load item
+      </button>
     </div>
   );
 };
