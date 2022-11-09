@@ -120,3 +120,9 @@ img {
     left: 30%;
 
 }
+.loadmore{
+    width: 500px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+ }
