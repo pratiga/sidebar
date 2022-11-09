@@ -4,9 +4,8 @@ import { data } from "../data/data";
 import "../styles/sidebar.css";
 import Cardloader from "./cardloader";
 
-const rightSidebar = ({ handeldetails }) => {
-  const [visible, setVisible] = useState(3);
-  const [isLoading, setIsLoading] = useState(false);
+const rightSidebar = ({ handeldetails,visible, setVisible }) => {
+  const [isLoading, setIsLoading] = useState();
   const showMoreItem = () => {
     setIsLoading(true);
     setTimeout(() => {
@@ -29,7 +28,7 @@ const rightSidebar = ({ handeldetails }) => {
         </div>
       ))}
       {isLoading === true && <Cardloader />}
-      <button className="btns loadmore"  onClick={showMoreItem}>
+      <button className="btns loadmore" onClick={showMoreItem}>
         Load item
       </button>
     </div>

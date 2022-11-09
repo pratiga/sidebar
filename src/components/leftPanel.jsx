@@ -1,7 +1,6 @@
 import React from "react";
-import { data } from "../data/data";
 
-const leftPanel = ({ detail }) => {
+const leftPanel = ({ detail, visible }) => {
   return (
     <>
       {detail ? (
@@ -18,7 +17,7 @@ const leftPanel = ({ detail }) => {
         </div>
       ) : (
         <div className="left-panel">
-          {/* <h1>Total No of ITEM: {data.length}</h1> */}
+          <h1>Total No of ITEM: {visible}</h1>
         </div>
       )}
     </>

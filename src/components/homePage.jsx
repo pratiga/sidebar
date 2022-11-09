@@ -5,6 +5,7 @@ import LeftPanel from "./leftPanel";
 
 const Sidebar = () => {
   const [detail, setDetail] = useState();
+  const [visible, setVisible] = useState(3);
   function handeldetails(item) {
     setDetail({ ...item });
   }
@@ -12,10 +13,13 @@ const Sidebar = () => {
   return (
     <sidebar>
       <div className="left-sidebar">
-        <LeftPanel detail={detail} />
+        <LeftPanel detail={detail} visible={visible} />
       </div>
       <div className="right-sidebar">
-        <RightSidebar handeldetails={handeldetails} />
+        <RightSidebar handeldetails={handeldetails}
+          visible={visible}
+          setVisible={setVisible}
+         />
       </div>
     </sidebar>
   );
