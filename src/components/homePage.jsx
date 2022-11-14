@@ -5,6 +5,8 @@ import { data } from "../data/data";
 import ItemList from "./ItemList";
 import LeftPanel from "./leftPanel";
 import CustomerList from "./customerList";
+import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
+
 
 const Homepage = () => {
   const [detail, setDetail] = useState();
@@ -12,6 +14,11 @@ const Homepage = () => {
   const [visible, setVisible] = useState(5);
   const [isLoading, setIsLoading] = useState();
   const [active, setActive] = useState("SecondCard");
+  const [collapse, setCollapse] = useState(true)
+  
+  function handleCollapse(){
+    setCollapse(!collapse)
+  }
 
   function handeldetails(item) {
     setDetail({ ...item });
@@ -51,8 +58,10 @@ const Homepage = () => {
             <option value="Ascending">Ascending</option>
             <option value="Descending">Descending</option>
           </select>
+          <button onClick={handleCollapse}><ArrowDropDownCircleIcon/></button>
+          
         </nav>
-        <div>
+        <div className={`right-sidebar ${collapse ?'right-sidebar-passive':''}`}>
           {active === "SecondCard" && (
             <ItemList
               handeldetails={handeldetails}
