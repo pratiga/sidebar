@@ -10,7 +10,9 @@ const rightSidebar = ({
   isLoading,
 }) => {
   return (
-    <div className="right-sidebar">
+    <div className="right-sidebar"
+      style={{height:"100rem", overflow:"auto"}}
+    >
       {items.map((item) => (
         <div className="items-box" onClick={() => handeldetails(item)}>
           <div className="items-image">
