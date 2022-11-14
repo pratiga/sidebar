@@ -5,13 +5,13 @@ import Cardloader from "./cardloader";
 
 const rightSidebar = ({
   handeldetails,
-  FilterData,
+  items,
   showMoreItem,
   isLoading,
 }) => {
   return (
     <div className="right-sidebar">
-      {FilterData.map((item) => (
+      {items.map((item) => (
         <div className="items-box" onClick={() => handeldetails(item)}>
           <div className="items-image">
             <img src={item.image} alt="images" />
